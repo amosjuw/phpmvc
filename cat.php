@@ -12,4 +12,6 @@ class cat {
         return $this->$position;
     }
 }
-
+    $pet = new cat("kitty");
+    $Myposition = $this->$position;
+    echo $myposition;
