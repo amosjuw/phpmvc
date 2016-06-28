@@ -1,6 +1,6 @@
 <?php
 class cat {
-    public $name;
+    protected $name;
     protected $position;
     public function __construt($name){
         $this->name=$name;
@@ -10,6 +10,17 @@ class cat {
         $this->position['x']=$x;
         $this->position['y']=$y;
         return $this->$position;
+    }
+    public function move($x,$y){
+        $this->position['x']+=$x;
+        $this->position['y']+=$y;
+        return $this->$position;
+    }
+    public function setName($name){
+        $this->name=$name;
+    }
+    public function getName(){
+        return $this->$name;
     }
 }
     $pet = new cat("kitty");
